@@ -142,8 +142,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: -944628639613478452, guid: 8094c82426a620b40a0fc07c46c0530c, type: 3}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -164,7 +163,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: Milestone1_TowerSlash_DecenaJohn.APK
+    Android: Milestone2_TowerSlash_DecenaJohn.APK
     Standalone: com.DefaultCompany.IOSPROG-1
   buildNumber:
     Standalone: 0
