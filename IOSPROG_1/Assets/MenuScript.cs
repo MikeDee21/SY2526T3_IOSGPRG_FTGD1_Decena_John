@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class MenuScript : MonoBehaviour
 {
-   public void BTN_StartGame()
+   public void BTN_StartGame(string SceneName)
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneName);
     }
 
     public void BTN_ExitApplication()

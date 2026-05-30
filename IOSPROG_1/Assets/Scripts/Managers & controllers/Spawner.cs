@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : Singleton<Spawner>
+public class Spawner : MonoBehaviour
 {
     [Header("Enemy")]
     [SerializeField] private GameObject _enemyPrefab;
@@ -18,6 +18,25 @@ public class Spawner : Singleton<Spawner>
     public Enemy CurrentEnemy;
     public Powerup CurrentPowerUp;
 
+    public static Spawner Instance;
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
     public void SpawnEnemy()
     {
         GameObject enemy = Instantiate(
@@ -67,4 +86,6 @@ public class Spawner : Singleton<Spawner>
             CurrentPowerUp = null;
         }
     }
+
+
 }

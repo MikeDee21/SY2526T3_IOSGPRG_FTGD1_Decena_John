@@ -2942,6 +2942,7 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1842887265}
   - {fileID: 1558209074}
   - {fileID: 1496228274}
   - {fileID: 963194228}
@@ -2949,6 +2950,5 @@ SceneRoots:
   - {fileID: 1053218263}
   - {fileID: 1061590919}
   - {fileID: 939686282}
-  - {fileID: 1842887265}
   - {fileID: 849675387}
   - {fileID: 798790713}

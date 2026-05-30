@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : MonoBehaviour
 {
     [Header("Game State")]
     private bool _gameOver;
@@ -19,9 +19,19 @@ public class GameManager : Singleton<GameManager>
 
 
     [SerializeField] private TextMeshProUGUI _scoreText;
- 
 
+    public static GameManager Instance;
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
     private void Start()
     {
         InitializeGame();

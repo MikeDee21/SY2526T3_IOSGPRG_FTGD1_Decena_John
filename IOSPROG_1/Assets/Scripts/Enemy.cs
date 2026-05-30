@@ -90,21 +90,24 @@ public class Enemy : MonoBehaviour
 
     public void CheckSwipe(SwipeDirection swipeDirection)
     {
-        if (!_canBeHit)
+        if (!_canBeHit || _currentPlayer == null)
             return;
 
-        if (_currentPlayer != null &&
-    (_currentPlayer.IsDashActive ||
-     swipeDirection == _requiredSwipe))
+        
+        if (_currentPlayer.IsDashActive)
+        {
+            KilledByPlayer();
+            return;
+        }
+
+   
+        if (swipeDirection == _requiredSwipe)
         {
             KilledByPlayer();
         }
         else
         {
-            if (_currentPlayer != null)
-            {
-                _currentPlayer.HitPlayer(1);
-            }
+            _currentPlayer.HitPlayer(1);
         }
     }
 

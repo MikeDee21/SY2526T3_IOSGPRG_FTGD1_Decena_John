@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         _isAlive = true;
         _playerLives = 3;
 
-        _dashCharge = 0;
+        _dashCharge = 9;
         UpdateDashUI();
     }
 
